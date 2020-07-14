@@ -200,6 +200,12 @@ let charZ = word => {
     return midName.length > 2;
 }
 console.log(inventors.find(charZ))
+//Return a new array, that only has inventors without a middle name
+
+
+console.log(inventors.filter((word) => {
+    return word.split(" ").length <= 2;
+}))
  
 //Find the number divisible by 7
 console.log(numbers.find(num => num % 7 === 0))
