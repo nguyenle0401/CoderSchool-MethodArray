@@ -100,10 +100,9 @@ console.log(inventors.map(word => word.length))
 
 //Print out all the inventors' names in uppercase
 console.log(inventors.map(word => word.toUpperCase()))
-Print out initials of all inventors(e.g. A.E., I.N., ...)
 
 //Print out initials of all inventors(e.g. A.E., I.N., ...)
-// console.log(inventors.map(word => word.split(' ')[0][0] + '.' + word.split(' ')[1][0]))
+
 let intalLetter = inventors.map(name => {
     let inventorSplit = name.split(" ")
     let result = ''
@@ -113,6 +112,7 @@ let intalLetter = inventors.map(name => {
     return result
     })
     console.log(intalLetter)
+    
 //Print out an array of every number multiplied by 100
 console.log(numbers.map(num => num * 100))
 
@@ -140,9 +140,7 @@ console.log(numbers.reduce((acc, num) => {
         res = acc + num
     }
     return res;
-}
-)
-)
+}))
 //Create a string that has the first name of every inventor.
 console.log(inventors.reduce((acc, word) => acc + ' ' + word.split(' ')[0]))
 
@@ -192,6 +190,7 @@ console.log(inventors.find(charZ))
  
 //Find the number divisible by 7
 console.log(numbers.find(num => num % 7 === 0))
+
 //Return a new array, that only has the numbers that are not divisible by 7
 console.log(numbers.filter(num => num % 7 !== 0))
 
