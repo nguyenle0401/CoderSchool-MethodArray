@@ -121,14 +121,32 @@ console.log(numbers.map(num => num * 100))
 console.log(inventors.sort())
 
 //Sort all the inventors in reverse alphabetical order, Z-A. Do not use the reverse method.
-let reverseArr = arr => {
-    let result = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        result.push(arr[i])
-    }
-    return result
-}
-console.log(reverseArr(inventors))
+// let reverseArr = arr => {  
+//     let result = [];
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         result.push(arr[i])
+//     }
+//     return result
+// }
+// console.log(reverseArr(inventors))
+// }
+
+let reverseAR = ((a,b) => {
+    let numberA = a.split(' ')[0]
+    let numberB = b.split(' ')[0]
+    return numberB.charCodeAt(0) - numberA.charCodeAt(0)
+})
+console.log(inventors.sort(reverseAR))
+
+// output = inventors.sort()
+// console.log(`4.1 Result: ${output}`)
+
+// output = inventors.sort((a,b) => {
+//   let firstA = a.split(' ')[0]
+//   let firstB = b.split(' ')[0]
+//   return firstB.charCodeAt(0) - firstA.charCodeAt(0)
+// })
+// console.log(`4.2 Result: ${output}`)
 
 //Sort all the inventors by length of name, shortest name first.
 console.log(inventors.sort((a, b) => {
