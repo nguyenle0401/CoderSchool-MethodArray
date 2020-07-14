@@ -112,7 +112,7 @@ let intalLetter = inventors.map(name => {
     return result
     })
     console.log(intalLetter)
-    
+
 //Print out an array of every number multiplied by 100
 console.log(numbers.map(num => num * 100))
 
@@ -129,6 +129,19 @@ let reverseArr = arr => {
     return result
 }
 console.log(reverseArr(inventors))
+
+//Sort all the inventors by length of name, shortest name first.
+console.log(inventors.sort((a, b) => {
+    return a.length - b.length;
+}))
+
+
+//Sort all the inventors by length of name, longest name first. Do not use the reverse method.
+console.log(inventors.sort((a, b) => {
+    return b.length - a.length;
+}))
+
+
 
 //Reduce
 //Find the sum of all the numbers
